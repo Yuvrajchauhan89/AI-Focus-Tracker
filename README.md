@@ -2,9 +2,13 @@
 
 > **Real-time AI-powered focus monitoring dashboard for tracking concentration, detecting distractions, and analyzing study/work sessions.**
 
-AI Focus Tracker is a modern full-stack web application designed to help users understand and improve their focus during study or work sessions.
+   
 
-The application uses webcam-based focus metrics, session tracking, analytics, distraction detection, and optional IoT alerts to create a complete focus-monitoring experience.
+### 🌐 Live Website
+
+**👉 ****[Launch AI Focus Tracker](https://yuvrajchauhan89.github.io/AI-Focus-Tracker/)**
+
+Explore the live application directly in your browser.
 
 ---
 
@@ -77,13 +81,13 @@ Configurable options include:
 
 The application includes:
 
-* 🏠 Home dashboard
+* 🏠 Home Dashboard
 * 📡 Live Tracker
 * 📈 Analytics Dashboard
 * 🕐 Session History
 * ⚙️ Settings
 
-The UI uses a futuristic glassmorphism / cyber-style design with animated elements and responsive layouts.
+The UI uses a futuristic **glassmorphism / cyber-style design** with animated elements and responsive layouts.
 
 ---
 
@@ -112,13 +116,13 @@ The UI uses a futuristic glassmorphism / cyber-style design with animated elemen
 
 ### Database
 
-The project uses a database layer powered by:
+* **PostgreSQL**
+* **Drizzle ORM**
+* **Drizzle schema/type definitions**
 
-* PostgreSQL
-* Drizzle ORM
-* Drizzle schema/type definitions
+---
 
-### Architecture
+## 🧩 Architecture
 
 ```text
 ┌───────────────────────────────┐
@@ -160,28 +164,28 @@ The focus engine maintains:
 * Distraction timers
 * Focus categories
 
-Focus states are classified into:
+### Focus Classification
 
-| Score                 | State           |
-| --------------------- | --------------- |
-| 80–100                | 🟢 High Focus   |
-| 50–79                 | 🟡 Medium Focus |
-| 30–49                 | 🟠 Low Focus    |
-| Distraction condition | 🔴 Distracted   |
+|                     Score | State           |
+| ------------------------: | --------------- |
+|                **80–100** | 🟢 High Focus   |
+|                 **50–79** | 🟡 Medium Focus |
+|                 **30–49** | 🟠 Low Focus    |
+| **Distraction condition** | 🔴 Distracted   |
 
 The system also considers:
 
-* Eye openness
-* Gaze direction
-* Head pose
-* Blink rate
-* Focus score history
+* 👁️ Eye openness
+* 🎯 Gaze direction
+* 🧭 Head pose
+* 👀 Blink rate
+* 📊 Focus score history
 
 ### ⚠️ Current ML Implementation
 
 The current repository contains a **simulated focus-data generator** for reliable demonstration and UI development.
 
-The architecture is designed so that the simulation can later be replaced with a real computer-vision pipeline such as:
+The architecture is designed so the simulation can later be replaced with a real computer-vision pipeline:
 
 ```text
 Webcam
@@ -248,7 +252,7 @@ ai-focus-tracker/
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/ai-focus-tracker.git
@@ -256,7 +260,7 @@ git clone https://github.com/YOUR_USERNAME/ai-focus-tracker.git
 cd ai-focus-tracker
 ```
 
-### 2. Install dependencies
+### 2. Install Dependencies
 
 This project uses **pnpm**.
 
@@ -270,11 +274,9 @@ If you don't have pnpm:
 npm install -g pnpm
 ```
 
-### 3. Configure the database
+### 3. Configure the Database
 
-Create the required environment configuration for your PostgreSQL database.
-
-Example:
+Create the required environment configuration for PostgreSQL.
 
 ```env
 DATABASE_URL=postgresql://username:password@localhost:5432/focus_tracker
@@ -282,9 +284,7 @@ DATABASE_URL=postgresql://username:password@localhost:5432/focus_tracker
 
 Make sure your PostgreSQL database is running.
 
-### 4. Start the application
-
-Start the frontend:
+### 4. Start the Frontend
 
 ```bash
 cd artifacts/focus-tracker
@@ -293,11 +293,15 @@ pnpm dev
 
 The Vite development server will start locally.
 
-Start the API server according to the server configuration in:
+### 5. Start the API Server
+
+Navigate to:
 
 ```text
 artifacts/api-server/
 ```
+
+and start the backend using the project's configured development command.
 
 ---
 
@@ -343,8 +347,6 @@ GET /health
 
 ## 📈 Example Focus Data
 
-A focus data point contains information such as:
-
 ```json
 {
   "focusScore": 87,
@@ -360,8 +362,6 @@ A focus data point contains information such as:
 ---
 
 ## 🔮 Future Improvements
-
-The project can be extended with:
 
 * [ ] Real MediaPipe Face Mesh integration
 * [ ] Real gaze estimation
@@ -401,32 +401,32 @@ The application is designed around webcam-based focus monitoring.
 
 If real computer-vision processing is added, a recommended production architecture is to process webcam frames **locally on the user's device** whenever possible instead of uploading raw video to a server.
 
-> Do not use focus metrics as a high-stakes assessment of a person's performance, mental state, or abilities.
+> ⚠️ Focus metrics should not be used as a high-stakes assessment of a person's performance, mental state, or abilities.
 
 ---
 
 ## 🛠️ Development
 
-Run type checking:
+### Type Checking
 
 ```bash
 pnpm typecheck
 ```
 
-Build the project:
+### Build
 
 ```bash
 pnpm build
 ```
 
-Frontend development:
+### Frontend Development
 
 ```bash
 cd artifacts/focus-tracker
 pnpm dev
 ```
 
-Frontend production build:
+### Production Build
 
 ```bash
 pnpm build
@@ -470,7 +470,9 @@ This project is licensed under the **MIT License**.
 
 ## ⭐ Support
 
-If you find this project useful, consider giving the repository a ⭐ on GitHub.
+If you find **AI Focus Tracker** useful, consider giving the repository a ⭐ on GitHub.
+
+Your support helps motivate further development! 🚀
 
 ---
 
